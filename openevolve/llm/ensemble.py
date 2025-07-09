@@ -9,6 +9,7 @@ from typing import Dict, List, Optional, Tuple
 
 from openevolve.llm.base import LLMInterface
 from openevolve.llm.openai import OpenAILLM
+from openevolve.llm.deepseek import DeepSeekLLM
 from openevolve.config import LLMModelConfig
 
 logger = logging.getLogger(__name__)
@@ -21,7 +22,10 @@ class LLMEnsemble:
         self.models_cfg = models_cfg
 
         # Initialize models from the configuration
-        self.models = [OpenAILLM(model_cfg) for model_cfg in models_cfg]
+        self.models = [
+            DeepSeekLLM(model_cfg) if getattr(model_cfg, 'api_base', None) and 'deepseek' in model_cfg.api_base else OpenAILLM(model_cfg)
+            for model_cfg in models_cfg
+        ]
 
         # Extract and normalize model weights
         self.weights = [model.weight for model in models_cfg]

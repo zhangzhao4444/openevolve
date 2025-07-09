@@ -1,0 +1,16 @@
+{
+  "name": "function-minimization-ts",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "ts-node initial_program.ts",
+    "evaluate": "ts-node evaluator.ts"
+  },
+  "dependencies": {
+    "ts-node": "^10.0.0",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.1"
+  }
+}

@@ -1,0 +1,1 @@
+# TypeScript 版本无需 Python 依赖，此文件留空以保持结构一致。 

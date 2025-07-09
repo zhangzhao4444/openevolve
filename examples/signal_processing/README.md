@@ -85,7 +85,7 @@ signal_processing/
    ```bash
    pip install -r requirements.txt
    ```
-3. Set up your LLM API key (e.g., `OPENAI_API_KEY` environment variable)
+3. Set up your LLM API key (e.g., `DEEPSEEK_API_KEY` or `OPENAI_API_KEY` environment variable)
 
 ### Testing the Setup (Recommended)
 First, validate that everything is working correctly:

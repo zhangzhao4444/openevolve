@@ -42,7 +42,8 @@ class LLMConfig(LLMModelConfig):
     """Configuration for LLM models"""
 
     # API configuration
-    api_base: str = "https://api.openai.com/v1"
+    api_base: str = "https://api.deepseek.com"
+    name: str = "deepseek-chat"
 
     # Generation parameters
     system_message: Optional[str] = "system_message"

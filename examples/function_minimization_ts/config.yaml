@@ -1,0 +1,39 @@
+# Configuration for function minimization example (TypeScript)
+max_iterations: 100
+checkpoint_interval: 10
+log_level: "INFO"
+
+llm:
+  primary_model: "deepseek-chat"
+  primary_model_weight: 0.8
+  # secondary_model: "gemini-2.0-flash"
+  secondary_model: "deepseek-coder"
+  secondary_model_weight: 0.2
+  # api_base: "https://generativelanguage.googleapis.com/v1beta/openai/"
+  api_base: "https://api.deepseek.com"
+  api_key: "sk-95009a6e33d14213bc137bdee884a6d4"  # Replace with your actual API key
+  temperature: 0.7
+  top_p: 0.95
+  max_tokens: 8192
+
+prompt:
+  system_message: "You are an expert programmer specializing in optimization algorithms. Your task is to improve a function minimization algorithm written in TypeScript to find the global minimum of a complex function. Focus on improving the minimizeFunction implementation."
+  num_top_programs: 3
+  use_template_stochasticity: true
+
+database:
+  population_size: 50
+  archive_size: 20
+  num_islands: 3
+  elite_selection_ratio: 0.2
+  exploitation_ratio: 0.7
+
+evaluator:
+  timeout: 60
+  cascade_evaluation: true
+  cascade_thresholds: [0.5, 0.75]
+  parallel_evaluations: 4
+  use_llm_feedback: false
+
+diff_based_evolution: true
+allow_full_rewrites: false 

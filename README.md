@@ -11,7 +11,7 @@ OpenEvolve is an evolutionary coding agent that uses Large Language Models to op
 Key features:
 - Evolution of entire code files, not just single functions
 - Support for multiple programming languages
-- Supports OpenAI-compatible APIs for any LLM
+- Supports DeepSeek (default) and OpenAI-compatible APIs for any LLM
 - Multi-objective optimization
 - Flexible prompt engineering
 - Distributed evaluation
@@ -42,8 +42,8 @@ pip install -e .
 
 ### Quick Start
 
-We use the OpenAI SDK, so you can use any LLM or provider that supports an OpenAI compatible API. Just set the `OPENAI_API_KEY` environment variable
-and update the `api_base` in config.yaml if you are using a provider other than OpenAI. For local models, you can use
+We use the OpenAI SDK, so you can use DeepSeek (default) or any LLM/provider that supports an OpenAI-compatible API. Set the `DEEPSEEK_API_KEY` (or `OPENAI_API_KEY` for OpenAI) environment variable
+and update the `api_base` in config.yaml if you are using a provider other than DeepSeek. For local models, you can use
 an inference server like [optillm](https://github.com/codelion/optillm).
 
 ```python

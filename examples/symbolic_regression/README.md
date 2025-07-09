@@ -18,7 +18,7 @@ Follow these steps to set up and run the symbolic regression benchmark example:
 
 ### 1. Configure API Keys
 
-The API key is read from the environment `OPENAI_API_KEY` by default. The primary and secondary model we used in testing LLM-SRBench is `gpt-4o` and `o3`. You can check `create_config()` in `data_api.py`.
+The API key is read from the environment `DEEPSEEK_API_KEY` (or `OPENAI_API_KEY`). The primary and secondary model we used in testing LLM-SRBench is `gpt-4o` and `o3`. You can check `create_config()` in `data_api.py`.
 
 
 ### 2. Load Benchmark Tasks & Generate Initial Programs
